@@ -1,2 +1,2 @@
 # luassh
-luassh https://www.libssh.org/documentation/
+libssh https://www.libssh.org/documentation/
