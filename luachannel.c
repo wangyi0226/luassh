@@ -47,7 +47,7 @@ lchannel_write(lua_State *L) {
 	size_t len=0;
 	const char *buffer=luaL_checklstring(L,2,&len);
 	len  = lua_isinteger(L,3)==1?lua_tointeger(L,3):len;
-	int r = ssh_channel_write(channel,buffer,sizeof(buffer));
+	int r = ssh_channel_write(channel,buffer,len);
 	if(r==SSH_ERROR){
 		luaL_error(L,ssh_get_error(channel->session));
 	}
